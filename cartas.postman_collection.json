@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "6d8250df-556b-443f-a86c-647f2a65407d",
+		"name": "Cartas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Pesquisa Genérica",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/carta",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"nome\": \"Caça-Magos\",\r\n\"descricao\": \"Sempre que este card atacar, silencie-o\",\r\n\"ataque\": \"2\",\r\n\"defesa\": \"3\",\r\n\"tipo\": \"Criatura\",\r\n\"classeCarta\": \"Mago\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/carta/cadastrar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carta",
+						"cadastrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pesquisa por id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/carta/findById/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carta",
+						"findById",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pesquisa por nome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/carta/findByNome/mago",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carta",
+						"findByNome",
+						"mago"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pesquisa por classe",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/carta/findByClasse/Mago",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carta",
+						"findByClasse",
+						"Mago"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pesquisa por tipo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/carta/findByTipo/Criatura",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carta",
+						"findByTipo",
+						"Criatura"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"nome\": \"Murlocs Tinyfin\",\r\n    \"descricao\": \"\",\r\n    \"ataque\": 1,\r\n    \"defesa\": 1,\r\n    \"tipo\": \"Criatura\",\r\n    \"classeCarta\": \"Caçador\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/carta/deletar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carta",
+						"deletar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alterar",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"nome\": \"Murlocs Tinyfin\",\r\n    \"descricao\": \"\",\r\n    \"ataque\": 1,\r\n    \"defesa\": 1,\r\n    \"tipo\": \"Criatura\",\r\n    \"classeCarta\": \"Caçador\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/carta/alterar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carta",
+						"alterar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
